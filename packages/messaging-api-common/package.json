@@ -1,0 +1,34 @@
+{
+  "name": "messaging-api-common",
+  "version": "1.0.4",
+  "description": "Helpers for common usages in Messaging API clients",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yoctol/messaging-apis.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/lodash": "^4.14.156",
+    "@types/url-join": "^4.0.0",
+    "axios": "^0.21.1",
+    "camel-case": "^4.1.1",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.15",
+    "map-obj": "^4.1.0",
+    "pascal-case": "^3.1.1",
+    "snake-case": "^3.0.3",
+    "type-fest": "1.4.0",
+    "url-join": "^4.0.1"
+  },
+  "keywords": [
+    "bot",
+    "chatbot",
+    "messaging-apis"
+  ],
+  "engines": {
+    "node": ">=10"
+  }
+}

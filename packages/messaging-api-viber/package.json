@@ -1,0 +1,29 @@
+{
+  "name": "messaging-api-viber",
+  "version": "1.1.0",
+  "description": "Messaging API client for Viber",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yoctol/messaging-apis.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@types/warning": "^3.0.0",
+    "axios": "^0.21.1",
+    "axios-error": "file:../axios-error",
+    "messaging-api-common": "file:../messaging-api-common",
+    "ts-invariant": "^0.4.4",
+    "warning": "^4.0.3"
+  },
+  "keywords": [
+    "bot",
+    "chatbot",
+    "messaging-apis",
+    "viber"
+  ],
+  "engines": {
+    "node": ">=10"
+  }
+}
