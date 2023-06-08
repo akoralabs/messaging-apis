@@ -10,7 +10,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "messaging-api-messenger": "file:../messaging-api-messenger",
+    "messaging-api-messenger-gilbertl": "file:../messaging-api-messenger",
     "type-fest": "^1.4.0"
   },
   "keywords": [

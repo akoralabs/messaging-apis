@@ -1,13 +1,15 @@
-import { MessengerClient } from 'messaging-api-messenger';
+import { MessengerClient } from 'messaging-api-messenger-gilbertl';
 import { mocked } from 'ts-jest/utils';
 
 import BatchRequestError from '../BatchRequestError';
 import FacebookBatchQueue from '../FacebookBatchQueue';
 import { isError613 } from '..';
 
-jest.mock('messaging-api-messenger');
+jest.mock('messaging-api-messenger-gilbertl');
 
-const { MessengerBatch } = jest.requireActual('messaging-api-messenger');
+const { MessengerBatch } = jest.requireActual(
+  'messaging-api-messenger-gilbertl'
+);
 
 const image = {
   attachment: {

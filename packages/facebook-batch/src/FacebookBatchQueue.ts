@@ -1,5 +1,8 @@
 import { JsonValue } from 'type-fest';
-import { MessengerClient, MessengerTypes } from 'messaging-api-messenger';
+import {
+  MessengerClient,
+  MessengerTypes,
+} from 'messaging-api-messenger-gilbertl';
 
 import BatchRequestError from './BatchRequestError';
 import {

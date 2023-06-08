@@ -2277,7 +2277,7 @@ export default class MessengerClient {
    * @example
    *
    * ```js
-   * const { MessengerBatch } = require('messaging-api-messenger');
+   * const { MessengerBatch } = require('messaging-api-messenger-gilbertl');
    *
    * await client.sendBatch([
    *   MessengerBatch.sendText(USER_ID, '1'),
