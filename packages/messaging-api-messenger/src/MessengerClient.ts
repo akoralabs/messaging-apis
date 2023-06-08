@@ -595,11 +595,14 @@ export default class MessengerClient {
    * ```
    */
   setMessengerProfile(
-    profile: MessengerTypes.MessengerProfile
+    profile: MessengerTypes.MessengerProfile,
+    opts: { platform?: 'instagram' | undefined } = {}
   ): Promise<MessengerTypes.MutationSuccessResponse> {
     return this.axios
       .post<MessengerTypes.MutationSuccessResponse>(
-        `/me/messenger_profile?access_token=${this.accessToken}`,
+        `/me/messenger_profile?access_token=${this.accessToken}${
+          opts.platform ? `&platform=${opts.platform}` : ''
+        }`,
         profile
       )
       .then((res) => res.data, handleError);
@@ -782,8 +785,10 @@ export default class MessengerClient {
     menuItems: MessengerTypes.MenuItem[] | MessengerTypes.PersistentMenuItem[],
     {
       composerInputDisabled = false,
+      platform = undefined,
     }: {
       composerInputDisabled?: boolean;
+      platform?: 'instagram' | undefined;
     } = {}
   ): Promise<MessengerTypes.MutationSuccessResponse> {
     // locale is in type PersistentMenuItem
@@ -793,21 +798,27 @@ export default class MessengerClient {
           'locale' in item && item.locale === 'default'
       )
     ) {
-      return this.setMessengerProfile({
-        persistentMenu: menuItems as MessengerTypes.PersistentMenu,
-      });
+      return this.setMessengerProfile(
+        {
+          persistentMenu: menuItems as MessengerTypes.PersistentMenu,
+        },
+        { platform }
+      );
     }
 
     // menuItems is in type MenuItem[]
-    return this.setMessengerProfile({
-      persistentMenu: [
-        {
-          locale: 'default',
-          composerInputDisabled,
-          callToActions: menuItems as MessengerTypes.MenuItem[],
-        },
-      ],
-    });
+    return this.setMessengerProfile(
+      {
+        persistentMenu: [
+          {
+            locale: 'default',
+            composerInputDisabled,
+            callToActions: menuItems as MessengerTypes.MenuItem[],
+          },
+        ],
+      },
+      { platform }
+    );
   }
 
   /**
