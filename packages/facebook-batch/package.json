@@ -1,6 +1,6 @@
 {
   "name": "facebook-batch-gilbertl",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Gracefully batching facebook requests.",
   "license": "MIT",
   "repository": {
@@ -10,7 +10,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "messaging-api-messenger-gilbertl": "^1.2.2",
+    "messaging-api-messenger-gilbertl": "^1.2.3",
     "type-fest": "^1.4.0"
   },
   "keywords": [
