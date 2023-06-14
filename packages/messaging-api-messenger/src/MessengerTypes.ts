@@ -56,6 +56,13 @@ export type RecipientWithOneTimeNotifToken = {
 };
 
 /**
+ * Used in marketing messages.
+ */
+export type RecipientWithNotificationToken = {
+  notification_messages_token: string;
+};
+
+/**
  * Description of the message recipient. All requests must include one to identify the recipient.
  */
 export type Recipient =
@@ -64,7 +71,8 @@ export type Recipient =
   | RecipientWithUserRef
   | RecipientWithPostId
   | RecipientWithCommentId
-  | RecipientWithOneTimeNotifToken;
+  | RecipientWithOneTimeNotifToken
+  | RecipientWithNotificationToken;
 
 /**
  * Description of the message recipient. If a string is provided, it will be recognized as a psid.
