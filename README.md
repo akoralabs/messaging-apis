@@ -1,3 +1,7 @@
+# Publishing
+
+yarn publish
+
 # Messaging APIs
 
 [![Build Status](https://github.com/Yoctol/messaging-apis/workflows/Node.js%20CI/badge.svg)](https://github.com/Yoctol/messaging-apis/actions?query=workflow%3ANode.js%20CI+branch%3Amaster)
