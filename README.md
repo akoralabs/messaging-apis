@@ -1,6 +1,6 @@
 # Publishing
 
-yarn publish
+lerna publish
 
 # Messaging APIs
 
